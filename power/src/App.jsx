@@ -5,6 +5,8 @@ import DemoHook from './components/DemoHook'
 import Clock from './components/Clock'
 import Slider from './components/Slider'
 import DemoEvents from './components/DemoEvents'
+import DemoForm from './components/DemoForm'
+import UserForm from './components/UserForm'
 
 function App() {
   let number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -12,6 +14,8 @@ function App() {
 
   return (
     <>
+      <UserForm />
+      <DemoForm />
       <DemoEvents />
       <Slider />
       <Clock />

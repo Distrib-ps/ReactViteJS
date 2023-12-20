@@ -5,7 +5,7 @@ function Find() {
     const [randomNumber, setRandomNumber] = useState(null);
   
     useEffect(() => {
-      setRandomNumber(Math.floor(Math.random() * 100) + 1);
+      setRandomNumber(Math.floor(Math.random() * 100));
     }, []);
 
     console.log(randomNumber);

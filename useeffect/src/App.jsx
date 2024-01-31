@@ -8,9 +8,10 @@ function App() {
 
   return (
     <>
-      <Calculator />
+    <Calculator />
+      {/*  
       <DemoReducer />
-      <Find />
+      <Find /> */}
     </>
 
   )

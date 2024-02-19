@@ -1,42 +1,126 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Styles spécifiques pour le NavLink actif */
+.activeNavLink {
+color: orange !important;
+  background-color: white;
+}
+
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.navlink {
+  color: rgba(0, 0, 0, 0.87);
+  text-decoration: none;
+  padding: 1rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 2px solid rgb(107 114 128);
+}
+
+/* Style pour l'accueil */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 2rem;
+}
+
+.regles {
   text-align: center;
+  max-width: 50%;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Style pour la page 404 */
+
+.notfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+/* Style pour la page Jouer */
+
+.letter-button {
+  background-color: #fff;
+  color: blue;
+  border: none;
+  font-size: 24px;
+  font-weight: 900;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.letter-button:hover {
+  cursor: pointer;
 }
 
-.card {
-  padding: 2em;
+.guessed {
+  color: gray;
 }
 
-.read-the-docs {
-  color: #888;
+.buttonPrimary {
+  padding: 0.5rem;
+  background-color: rgb(234 88 12);
+  border-radius: 0.5rem;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.buttonPrimary:hover {
+  background-color: rgb(154 52 18);
+  cursor: pointer;
+}
+
+.heroPlay {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.rightPlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin-left: 7rem;
+}
+
+.guessInput {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #fff;
+  border: 2px solid rgb(107 114 128);
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  margin-right: 2rem;
+}
+
+.guessInput:focus {
+  border-color: rgb(31 41 55);
+}
+
+.mysteryWord {
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+}
+
+.letter {
+  padding: 0.7rem;
+  border: 2px solid rgb(14 165 233)
 }

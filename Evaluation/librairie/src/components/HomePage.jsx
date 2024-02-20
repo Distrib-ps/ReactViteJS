@@ -1,25 +1,26 @@
-import { useBooks } from '../context/GestionLivres';
+import { useLivres } from '../context/GestionLivres';
 
+// Fonction pour afficher la liste des livres et pour augmenter ou diminuer le stock
 const HomePage = () => {
-    const { books, dispatch } = useBooks();
+    const { livres, dispatch } = useLivres();
   
     return (
       <div style={{ padding: '20px' }}>
-        {books.map((book, index) => (
+        {livres.map((livre, index) => (
           <div key={index} style={{
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             margin: '10px 0',
             padding: '10px',
-            background: book.stock === 0 ? 'grey' : 'lightblue',
-            color: book.stock === 0 ? 'white' : 'black',
+            background: livre.stock === 0 ? 'grey' : 'lightblue',
+            color: livre.stock === 0 ? 'white' : 'black',
             borderRadius: '5px'
           }}>
-            <span>{book.title} - Stock: {book.stock}</span>
+            <span>{livre.title} - Stock: {livre.stock}</span>
             <div>
-              <button onClick={() => dispatch({ type: 'INCREMENT_STOCK', title: book.title })} style={{ marginRight: '5px' }}>+</button>
-              <button onClick={() => dispatch({ type: 'DECREMENT_STOCK', title: book.title })}>-</button>
+              <button onClick={() => dispatch({ type: 'INCREMENT_STOCK', title: livre.title })} style={{ marginRight: '5px' }}>+</button>
+              <button onClick={() => dispatch({ type: 'DECREMENT_STOCK', title: livre.title })}>-</button>
             </div>
           </div>
         ))}
